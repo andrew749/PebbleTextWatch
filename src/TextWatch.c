@@ -26,7 +26,6 @@ static GFont boldFont;
 static char line1Str[2][BUFFER_SIZE];
 static char line2Str[2][BUFFER_SIZE];
 static char line3Str[2][BUFFER_SIZE];
-static char dateLine[2][BUFFER_SIZE];
 static char date_text[] = "Xxxxxxxxx 00";
 
 
@@ -145,6 +144,7 @@ static void display_initial_time(struct tm *t) {
 	text_layer_set_text(line1.currentLayer, line1Str[0]);
 	text_layer_set_text(line2.currentLayer, line2Str[0]);
 	text_layer_set_text(line3.currentLayer, line3Str[0]);
+	text_layer_set_text(text_date_layer, "null");
 }
 
 // Debug methods. For quickly debugging enable debug macro on top to transform the watchface into
@@ -205,9 +205,7 @@ static void handle_minute_tick(struct tm *tick_time, TimeUnits units_changed) {
 	t = tick_time;
 	display_time(tick_time);
 }
-static void handle_date_change() {
 
-}
 
 
 static void init() {
