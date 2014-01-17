@@ -132,8 +132,8 @@ static void makeAnimationsForLayers(Line *line, TextLayer *current,
 			if (needToUpdateLine(&line3, line3Str, textLine3)) {
 				updateLineTo(&line3, line3Str, textLine3);
 			}
-			strftime(date_text, sizeof(date_text), "%B %e", tick_time);
-			text_layer_set_text(date_layer));
+			strftime(date_text, sizeof(date_text), "%B %e", t);
+			text_layer_set_text(text_date_layer, date_text);
 		}
 
 		// Update screen without animation first time we start the watchface
