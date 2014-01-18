@@ -219,25 +219,25 @@ static void init() {
 
 	// Custom fonts
 	lightFont = fonts_load_custom_font(
-			resource_get_handle(RESOURCE_ID_FONT_GOTHAM_LIGHT_31));
+			resource_get_handle(RESOURCE_ID_FONT_GOTHAM_LIGHT_40));
 	boldFont = fonts_load_custom_font(
-			resource_get_handle(RESOURCE_ID_FONT_GOTHAM_BOLD_36));
+			resource_get_handle(RESOURCE_ID_FONT_GOTHAM_BOLD_45));
 
 	// 1st line layers
-	line1.currentLayer = text_layer_create(GRect(0, 0, 144, 40));
-	line1.nextLayer = text_layer_create(GRect(144, 0, 144, 40));
+	line1.currentLayer = text_layer_create(GRect(0, 0, 144, 50));
+	line1.nextLayer = text_layer_create(GRect(144, 0, 144, 50));
 	configureBoldLayer(line1.currentLayer);
 	configureBoldLayer(line1.nextLayer);
 
 	// 2nd layers
-	line2.currentLayer = text_layer_create(GRect(0, 40, 144, 40));
-	line2.nextLayer = text_layer_create(GRect(144, 40, 144, 40));
+	line2.currentLayer = text_layer_create(GRect(0, 40, 144, 50));
+	line2.nextLayer = text_layer_create(GRect(144, 40, 144, 50));
 	configureLightLayer(line2.currentLayer);
 	configureLightLayer(line2.nextLayer);
 
 	// 3rd layers
-	line3.currentLayer = text_layer_create(GRect(0, 80, 144, 50));
-	line3.nextLayer = text_layer_create(GRect(144, 80, 144, 50));
+	line3.currentLayer = text_layer_create(GRect(0, 75, 144, 50));
+	line3.nextLayer = text_layer_create(GRect(144, 75, 144, 50));
 	configureLightLayer(line3.currentLayer);
 	configureLightLayer(line3.nextLayer);
 
